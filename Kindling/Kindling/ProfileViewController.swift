@@ -13,6 +13,8 @@ class ProfileViewController: UIViewController {
 
     //MARK: - Properties
     
+    let kindler = PFUser.currentUser()
+    
     @IBOutlet weak var userImageView        :UIImageView!
     @IBOutlet weak var usernameTextField    :UITextField!
     @IBOutlet weak var firstNameTextField   :UITextField!
@@ -26,11 +28,55 @@ class ProfileViewController: UIViewController {
     //MARK: - Interactivity Methods
     
     func displayCurrentUserProfile() {
-        let kindler = PFUser.currentUser()
         usernameTextField.text = kindler!.username
+        if kindler!["firstName"] != nil {
+            firstNameTextField.text! = (kindler!["firstName"] as! String)
+        } else {
+            print("Error")
+        }
+        if kindler!["lastName"] != nil {
+            lastNameTextField.text = (kindler!["lastName"] as! String)
+        } else {
+            print("Error")
+        }
         emailTextField.text = kindler!.email
+        if kindler!["gender"] != nil {
+            genderTextField.text = (kindler!["gender"] as! String)
+        } else {
+            print("Error")
+        }
+        if kindler!["orientation"] != nil {
+            orientationTextField.text = (kindler!["orientation"] as! String)
+        } else {
+            print("Error")
+        }
+        if kindler!["age"] != nil {
+            ageTextField.text = (kindler!["age"] as! String)
+        } else {
+            print("Error")
+        }
     }
     
+    @IBAction func saveButtonPressed() {
+        print("Save Pressed")
+        kindler!.username = usernameTextField.text
+        kindler!["firstName"] = firstNameTextField.text
+        kindler!["lastName"] = lastNameTextField.text
+        kindler!.email = emailTextField.text
+        kindler!["gender"] = genderTextField.text
+        kindler!["orientation"] = orientationTextField.text
+        kindler!["age"] = ageTextField.text
+        saveAndPop()
+    }
+    
+    func saveAndPop() {
+        do {
+            try kindler!.save()
+        } catch {
+            print("Save Error")
+        }
+        navigationController?.popViewControllerAnimated(true)
+    }
     
     
     //MARK: - Life Cycle Methods

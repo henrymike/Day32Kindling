@@ -203,7 +203,13 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="🔥Profile" id="cui-B6-m3F"/>
+                    <navigationItem key="navigationItem" title="🔥Profile" id="cui-B6-m3F">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9Zn-vP-gLT">
+                            <connections>
+                                <action selector="saveButtonPressed" destination="aNR-vU-Rbl" id="x8W-y4-jMK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ageTextField" destination="LBL-mg-cF1" id="KNm-Y5-LuN"/>
                         <outlet property="emailTextField" destination="u03-BC-3KC" id="VEm-Aa-POS"/>

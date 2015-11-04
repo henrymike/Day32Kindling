@@ -29,6 +29,17 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         let kindler = dataManager.dataArray[indexPath.row]
         cell.userNameLabel.text = kindler.username!  //kindler["age"]
         print("Username:\(kindler.username!)")
+        if kindler["age"] != nil {
+            cell.userAgeLabel.text = (kindler["age"] as! String)
+        } else {
+            print("Error")
+        }
+        if kindler["gender"] != nil {
+            cell.userGenderLabel.text = (kindler["gender"] as! String)
+        } else {
+            print("Error")
+        }
+        cell.userImageView.image = UIImage(named: "person")
         
         return cell
     }
@@ -108,6 +119,11 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         dataManager.fetchDataFromParse()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "newDataReceived", name: "receivedDataFromServer", object: nil) // listens for fetch
 
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        dataManager.fetchDataFromParse()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "newDataReceived", name: "receivedDataFromServer", object: nil) // listens for fetch
     }
 
     override func didReceiveMemoryWarning() {
