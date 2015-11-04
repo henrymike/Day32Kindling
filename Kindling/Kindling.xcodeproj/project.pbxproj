@@ -13,6 +13,8 @@
 		552662CF1BEA71DF005856D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552662CE1BEA71DF005856D1 /* Assets.xcassets */; };
 		552662D21BEA71DF005856D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 552662D01BEA71DF005856D1 /* LaunchScreen.storyboard */; };
 		552662DF1BEA906D005856D1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552662DE1BEA906D005856D1 /* DataManager.swift */; };
+		552662E31BEA9E27005856D1 /* KindlingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552662E21BEA9E27005856D1 /* KindlingCollectionViewCell.swift */; };
+		552662E51BEAA436005856D1 /* Kindlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552662E41BEAA436005856D1 /* Kindlers.swift */; };
 		F62BDE979EB60F82A95CBCFE /* Pods_Kindling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19F8365C7714CB2D43ED033 /* Pods_Kindling.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		552662D31BEA71DF005856D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		552662D91BEA72BE005856D1 /* Kindling-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kindling-Bridging-Header.h"; sourceTree = "<group>"; };
 		552662DE1BEA906D005856D1 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		552662E21BEA9E27005856D1 /* KindlingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindlingCollectionViewCell.swift; sourceTree = "<group>"; };
+		552662E41BEAA436005856D1 /* Kindlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kindlers.swift; sourceTree = "<group>"; };
 		8B24563004A572927AC62200 /* Pods-Kindling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kindling.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kindling/Pods-Kindling.release.xcconfig"; sourceTree = "<group>"; };
 		F19F8365C7714CB2D43ED033 /* Pods_Kindling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kindling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -66,7 +70,9 @@
 			children = (
 				552662C71BEA71DF005856D1 /* AppDelegate.swift */,
 				552662C91BEA71DF005856D1 /* ViewController.swift */,
+				552662E21BEA9E27005856D1 /* KindlingCollectionViewCell.swift */,
 				552662DE1BEA906D005856D1 /* DataManager.swift */,
+				552662E41BEAA436005856D1 /* Kindlers.swift */,
 				552662CB1BEA71DF005856D1 /* Main.storyboard */,
 				552662CE1BEA71DF005856D1 /* Assets.xcassets */,
 				552662D01BEA71DF005856D1 /* LaunchScreen.storyboard */,
@@ -215,7 +221,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552662E31BEA9E27005856D1 /* KindlingCollectionViewCell.swift in Sources */,
 				552662CA1BEA71DF005856D1 /* ViewController.swift in Sources */,
+				552662E51BEAA436005856D1 /* Kindlers.swift in Sources */,
 				552662DF1BEA906D005856D1 /* DataManager.swift in Sources */,
 				552662C81BEA71DF005856D1 /* AppDelegate.swift in Sources */,
 			);

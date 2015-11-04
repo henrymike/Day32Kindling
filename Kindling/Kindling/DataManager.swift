@@ -13,7 +13,7 @@ class DataManager: NSObject {
     
     //MARK: - Properties
     static let sharedInstance = DataManager()
-    var dataArray :NSArray!
+    var dataArray = [PFUser]()
     
     
     //MARK: - Fetch Methods
@@ -24,8 +24,11 @@ class DataManager: NSObject {
         fetch!.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if error == nil {
                 print("Got Data")
-                self.dataArray = objects
+                self.dataArray = objects as! [PFUser]
                 print(self.dataArray)
+                dispatch_async(dispatch_get_main_queue()) { // set listener
+                    NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "receivedDataFromServer", object: nil))
+                }
             } else {
                 print("No Data")
             }

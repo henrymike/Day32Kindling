@@ -10,11 +10,37 @@ import UIKit
 import Parse
 import ParseUI
 
-class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
+class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
 
     //MARK: - Properties
     var dataManager = DataManager.sharedInstance
-    @IBOutlet var loginButton   :UIBarButtonItem!
+    @IBOutlet weak var loginButton           :UIBarButtonItem!
+    @IBOutlet weak var kindlerCollectionView :UICollectionView!
+    
+    
+    //MARK: - Collection View Methods
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataManager.dataArray.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! KindlingCollectionViewCell
+        let kindler = dataManager.dataArray[indexPath.row]
+        cell.userNameLabel.text = kindler.username!  //kindler["age"]
+        print("Username:\(kindler.username!)")
+        
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(150, 200)
+    }
+    
+    func newDataReceived() {
+        print("New Data Received")
+        kindlerCollectionView.reloadData()
+    }
     
     
     
@@ -80,6 +106,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         PFUser.logOut()
         loginButton.title = "Log In"
         dataManager.fetchDataFromParse()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "newDataReceived", name: "receivedDataFromServer", object: nil) // listens for fetch
 
     }
 
