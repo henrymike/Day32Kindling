@@ -15,6 +15,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     //MARK: - Properties
     var dataManager = DataManager.sharedInstance
     @IBOutlet weak var loginButton           :UIBarButtonItem!
+    @IBOutlet weak var profileButton         :UIBarButtonItem!
     @IBOutlet weak var kindlerCollectionView :UICollectionView!
     
     
@@ -93,6 +94,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         dismissViewControllerAnimated(true, completion: nil)
         setUsernameDefault(logInController.logInView!.usernameField!.text!) // sets default username
         loginButton.title = "Log Out"
+        profileButton.enabled = true
     }
     
     func logInViewControllerDidCancelLogIn(logInController: PFLogInViewController) {
@@ -116,6 +118,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         super.viewDidLoad()
         PFUser.logOut()
         loginButton.title = "Log In"
+        profileButton.enabled = false
         dataManager.fetchDataFromParse()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "newDataReceived", name: "receivedDataFromServer", object: nil) // listens for fetch
 

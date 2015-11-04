@@ -28,6 +28,7 @@ class ProfileViewController: UIViewController {
     //MARK: - Interactivity Methods
     
     func displayCurrentUserProfile() {
+        userImageView.image = UIImage(named: "person")
         usernameTextField.text = kindler!.username
         if kindler!["firstName"] != nil {
             firstNameTextField.text! = (kindler!["firstName"] as! String)
