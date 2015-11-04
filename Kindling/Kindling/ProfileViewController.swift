@@ -13,21 +13,22 @@ class ProfileViewController: UIViewController {
 
     //MARK: - Properties
     
-    @IBOutlet weak var userImageView    :UIImageView!
-    @IBOutlet weak var usernameLabel    :UILabel!
-    @IBOutlet weak var firstNameLabel   :UILabel!
-    @IBOutlet weak var lastNameLabel    :UILabel!
-    @IBOutlet weak var emailLabel       :UILabel!
-    @IBOutlet weak var genderLabel      :UILabel!
-    @IBOutlet weak var orientationLabel :UILabel!
-    @IBOutlet weak var ageLabel         :UILabel!
+    @IBOutlet weak var userImageView        :UIImageView!
+    @IBOutlet weak var usernameTextField    :UITextField!
+    @IBOutlet weak var firstNameTextField   :UITextField!
+    @IBOutlet weak var lastNameTextField    :UITextField!
+    @IBOutlet weak var emailTextField       :UITextField!
+    @IBOutlet weak var genderTextField      :UITextField!
+    @IBOutlet weak var orientationTextField :UITextField!
+    @IBOutlet weak var ageTextField         :UITextField!
     
     
     //MARK: - Interactivity Methods
     
     func displayCurrentUserProfile() {
         let kindler = PFUser.currentUser()
-        usernameLabel.text = kindler?.username
+        usernameTextField.text = kindler!.username
+        emailTextField.text = kindler!.email
     }
     
     

@@ -141,7 +141,7 @@
             </objects>
             <point key="canvasLocation" x="1057" y="237"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--🔥Profile-->
         <scene sceneID="bao-xN-ZcN">
             <objects>
                 <viewController id="aNR-vU-Rbl" customClass="ProfileViewController" customModule="Kindling" customModuleProvider="target" sceneMemberID="viewController">
@@ -157,75 +157,62 @@
                                 <rect key="frame" x="180" y="73" width="240" height="128"/>
                                 <animations/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18Z-V7-lwC">
-                                <rect key="frame" x="20" y="225" width="269" height="21"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p9N-rJ-IT7">
+                                <rect key="frame" x="20" y="228" width="269" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5f-cp-zDG">
-                                <rect key="frame" x="20" y="254" width="284" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u03-BC-3KC">
+                                <rect key="frame" x="321" y="228" width="259" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzD-4a-McX">
-                                <rect key="frame" x="20" y="283" width="284" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lts-Ao-Xdp">
+                                <rect key="frame" x="20" y="266" width="269" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKX-an-qTq">
-                                <rect key="frame" x="321" y="254" width="259" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XKt-fC-Uav">
+                                <rect key="frame" x="321" y="266" width="259" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENn-AG-oUj">
-                                <rect key="frame" x="321" y="283" width="259" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VO4-1Z-KYh">
+                                <rect key="frame" x="20" y="304" width="269" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suM-hK-mxU">
-                                <rect key="frame" x="321" y="225" width="259" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LBL-mg-cF1">
+                                <rect key="frame" x="321" y="304" width="259" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PcG-bd-z01">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Orientation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vGK-ch-ong">
+                                <rect key="frame" x="20" y="342" width="269" height="30"/>
                                 <animations/>
-                                <items>
-                                    <navigationItem title="🔥Kindler Profile" id="xEe-vk-7SY"/>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Orientation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RES-2h-E64">
-                                <rect key="frame" x="20" y="312" width="284" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="🔥Profile" id="cui-B6-m3F"/>
                     <connections>
-                        <outlet property="ageLabel" destination="ENn-AG-oUj" id="C9O-oU-NQg"/>
-                        <outlet property="emailLabel" destination="suM-hK-mxU" id="1pa-4m-kfn"/>
-                        <outlet property="firstNameLabel" destination="Z5f-cp-zDG" id="FlU-id-cqA"/>
-                        <outlet property="genderLabel" destination="PzD-4a-McX" id="F9j-eC-QcZ"/>
-                        <outlet property="lastNameLabel" destination="VKX-an-qTq" id="3zC-UC-V1j"/>
-                        <outlet property="orientationLabel" destination="RES-2h-E64" id="5kT-ZF-56p"/>
+                        <outlet property="ageTextField" destination="LBL-mg-cF1" id="KNm-Y5-LuN"/>
+                        <outlet property="emailTextField" destination="u03-BC-3KC" id="VEm-Aa-POS"/>
+                        <outlet property="firstNameTextField" destination="lts-Ao-Xdp" id="5BE-Sm-h8C"/>
+                        <outlet property="genderTextField" destination="VO4-1Z-KYh" id="kZa-Er-Y9J"/>
+                        <outlet property="lastNameTextField" destination="XKt-fC-Uav" id="tLF-Gl-B9Z"/>
+                        <outlet property="orientationTextField" destination="vGK-ch-ong" id="8fm-Rl-vjB"/>
                         <outlet property="userImageView" destination="Pch-ei-05E" id="ypP-RC-HZO"/>
-                        <outlet property="usernameLabel" destination="18Z-V7-lwC" id="msh-bI-uae"/>
+                        <outlet property="usernameTextField" destination="p9N-rJ-IT7" id="Ybo-Ck-xaC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V5O-nf-PkA" userLabel="First Responder" sceneMemberID="firstResponder"/>
