@@ -65,6 +65,14 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43c-P1-7Jz">
+                                                    <rect key="frame" x="57" y="170" width="37" height="30"/>
+                                                    <animations/>
+                                                    <state key="normal" title="Email"/>
+                                                    <connections>
+                                                        <action selector="sendEmailButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Z9-72-kJM"/>
+                                                    </connections>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3K-St-cO4">
                                                     <rect key="frame" x="8" y="131" width="134" height="21"/>
                                                     <animations/>
@@ -97,6 +105,7 @@
                                         <size key="customSize" width="150" height="200"/>
                                         <connections>
                                             <outlet property="userAgeLabel" destination="kzz-io-bTE" id="KN2-AE-ESP"/>
+                                            <outlet property="userEmailButton" destination="43c-P1-7Jz" id="z5Q-os-dFC"/>
                                             <outlet property="userGenderLabel" destination="L6i-wG-ANI" id="uqc-KN-jU0"/>
                                             <outlet property="userImageView" destination="PX6-oU-aOB" id="Avk-Xb-BvS"/>
                                             <outlet property="userNameLabel" destination="h3K-St-cO4" id="UdE-DX-wgO"/>

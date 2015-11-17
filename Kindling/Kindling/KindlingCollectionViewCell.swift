@@ -15,5 +15,6 @@ class KindlingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var userNameLabel    :UILabel!
     @IBOutlet weak var userGenderLabel  :UILabel!
     @IBOutlet weak var userAgeLabel     :UILabel!
+    @IBOutlet weak var userEmailButton  :UIButton!
     
 }

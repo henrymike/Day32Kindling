@@ -9,8 +9,9 @@
 import UIKit
 import Parse
 import ParseUI
+import MessageUI
 
-class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, MFMailComposeViewControllerDelegate {
 
     //MARK: - Properties
     var dataManager = DataManager.sharedInstance
@@ -55,6 +56,38 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     }
     
     
+    //MARK: - Email Sending Methods
+    
+    @IBAction func sendEmailButtonTapped(sender: UIButton) {
+        let mailComposeViewController = configuredMailComposeViewController()
+        if MFMailComposeViewController.canSendMail() {
+            self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            self.showSendMailErrorAlert()
+        }
+    }
+    
+    func configuredMailComposeViewController() -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self
+        
+        mailComposerVC.setToRecipients(["email@aol.com"])
+        mailComposerVC.setSubject("Matched on Kindler")
+        mailComposerVC.setMessageBody("Hey there...", isHTML: false)
+        
+        return mailComposerVC
+    }
+    
+    func showSendMailErrorAlert() {
+        let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Do you have an email accound set up?", preferredStyle: .Alert)
+        sendMailErrorAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    
     
     //MARK: - User Default Methods
     
@@ -78,7 +111,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     @IBAction func loginButtonPressed(sender: UIBarButtonItem) {
         if let _ = PFUser.currentUser() {
             PFUser.logOut()
-            loginButton.title = "Log In"
+            loginButton.title = "Log Out"
         } else {
             let loginController = PFLogInViewController()
             loginController.delegate = self
